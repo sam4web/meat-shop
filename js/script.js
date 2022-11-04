@@ -8,9 +8,22 @@ $('.back-to-top').click(() => {
   window.scrollTo(0, 0);
 });
 
-// loads header and footer
-$(document).ready(() => {
-  console.log('ready');
-  $('.header_wrapper').load('/components/header.html');
-  $('.footer_wrapper').load('/components/footer.html');
+//set Active link according to pages
+let origin = window.location.origin;
+let page_location = window.location.href.replace(origin + '/', '').trim();
+// console.log(page_location);
+$('.navbar_links a[href*="' + page_location + '"]')
+  .addClass('active')
+  .siblings()
+  .removeClass('active');
+
+if (page_location == '' || null) {
+  $('.navbar_links a[href="/"]')
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
+}
+
+$('.toggle-btn').click(() => {
+  $('.header').toggleClass('show-nav');
 });
