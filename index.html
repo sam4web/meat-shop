@@ -12,16 +12,101 @@
     <link href="/assets/fontawesome/css/regular.css" rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.min.css" />
+
+    <!-- JS -->
+    <script src="/js/jquery.min.js"></script>
   </head>
   <body>
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    <app-header> </app-header>
+    <app-header></app-header>
+
+    <!-- Hero Start -->
+    <section class="hero">
+      <div class="section-container">
+        <div class="text-container">
+          <h2 class="section-label">delicious organic meat</h2>
+          <h1 class="section-title">enjoy fresh meat with the best quality</h1>
+        </div>
+        <a class="btn" href="#"> Read more </a>
+      </div>
+      <!-- / section container -->
+
+      <div class="image-container">
+        <script>
+          for (let i = 0; i < 3; i++) {
+            document.write(`
+            <div 
+              class="hero-img" 
+              style="background-image: linear-gradient(#00000040, #00000040), 
+                      url('/assets/img/hero-img-${i + 1}.jpg')">
+              <div class="img-content">
+                <h3 class="img-text">
+                  OFF
+                  <span class="num-text"> 30% </span>
+                  Mutton
+                </h3>
+                <a href="#" class="btn btn-rounded">Buy Now</a>
+              </div>
+              <!-- / img-content -->
+              </div>
+              `);
+          }
+        </script>
+        <!-- / hero-img -->
+      </div>
+      <!-- / image container -->
+    </section>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+    <section class="about">
+      <div class="section-container">
+        <div class="content-container">
+          <h2 class="section-title">about us</h2>
+          <p class="about-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            commodo velit nec tellus varius, pulvinar pharetra urna ultricies.
+            Maecenas ut varius odio. Morbi orci urna, finibus sit amet convallis
+            sed, ultricies vitae odio.
+          </p>
+          <p class="about-content">
+            Etiam sit amet massa sagittis odio condimentum sagittis. Nulla
+            egestas vitae nisl eget ultricies. Vivamus a suscipit felis.
+            Suspendisse felis risus, blandit vehicula justo in, mattis elementum
+            turpis. Morbi elementum, mi eget ultrices lobortis, velit nibh
+            posuere diam, at aliquam sapien diam ut nisi. Suspendisse non justo
+            dolor. Suspendisse potenti. Duis egestas congue nunc, eu ullamcorper
+            purus aliquam non.
+          </p>
+        </div>
+        <!-- / content container -->
+
+        <div class="image-container">
+          <script>
+            for (let i = 0; i < 3; i++) {
+              document.write(
+                `
+                <img 
+                  src="/assets/img/about-${i + 1}.jpg" 
+                  style="grid-area: about-${i + 1};"
+                  class='about-image'
+                  id='about-image-${i + 1}'
+                  alt="about-image" />
+                `
+              );
+            }
+          </script>
+        </div>
+        <!-- / image container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- About End -->
 
     <!-- JS -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/component.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/components.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

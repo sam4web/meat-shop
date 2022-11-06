@@ -1,1 +1,196 @@
 // styles for home page
+
+// hero section start
+.hero {
+  position: relative;
+  background-image: linear-gradient(#ffffff45, #ffffff45),
+    url('/assets/img/hero-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  .section-container {
+    max-width: 400px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: 0px;
+    height: 470px;
+    padding: 0 25px;
+    @include flex(space-evenly, flex-start);
+    flex-direction: column;
+
+    @include responsive_small {
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .section-title,
+  .section-label,
+  .img-content {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+
+    @include responsive_small {
+      margin-bottom: 5px;
+    }
+  }
+
+  .section-title {
+    font-size: 36px;
+    line-height: 53px;
+    color: $black;
+    text-align: left;
+
+    @include responsive_small {
+      font-size: 30px;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+
+  .section-label {
+    font-size: 23px;
+    line-height: 30px;
+    color: $pri_clr;
+    text-transform: uppercase;
+
+    @include responsive_small {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  .image-container {
+    position: absolute;
+    padding: 15px 10px;
+    width: 100%;
+    max-width: 1100px;
+    top: 410px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include grid(30px, center, center);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 330px));
+    place-items: center;
+
+    @include responsive(0px, 1080px) {
+      display: none;
+    }
+  }
+
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: 290px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+
+    @include responsive_medium {
+      width: 270px;
+      height: 250px;
+    }
+  }
+
+  .img-content {
+    padding: 30px;
+
+    .img-text {
+      margin-bottom: 35px;
+      max-width: 100px;
+      font-family: 'Poppins_Bold';
+      font-size: 21px;
+      line-height: 32px;
+      color: $white;
+
+      .num-text {
+        font-size: 40px;
+        line-height: 43px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+// hero section end
+
+.about {
+  margin-top: 225px;
+
+  @include responsive(0px, 1080px) {
+    margin-top: 0;
+  }
+
+  .section-container {
+    @include grid(30px);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include responsive_medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .section-title {
+    padding-bottom: 10px;
+  }
+
+  &-content {
+    margin: 30px 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: $black;
+
+    @include responsive_medium {
+      margin: 15px 0;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    @include grid(10px, center, center);
+    grid-template-areas:
+      'about-1 about-2'
+      'about-3 about-3';
+    gap: 10px;
+
+    @include responsive_medium {
+      grid-template-areas: 'about-1 about-2';
+    }
+
+    .about-image {
+      // border: 10px solid $white;
+
+      position: relative;
+    }
+
+    #about-image-1 {
+      z-index: 50;
+    }
+
+    #about-image-2 {
+      left: -10px;
+      top: 25px;
+      z-index: 100;
+      border: 15px solid $white;
+
+      @include responsive_medium {
+        left: -35px;
+        top: -50px;
+      }
+    }
+
+    #about-image-3 {
+      border: 20px solid $white;
+      bottom: 135px;
+      left: -40px;
+
+      @include responsive_medium {
+        display: none;
+      }
+    }
+  }
+}
