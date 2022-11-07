@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Meat Shop - Home</title>
-    <link rel="icon" href="" />
+    <title>Meat Shop</title>
+    <link rel="icon" href="/assets/img/icon.ico" />
     <!-- FontAwesome -->
     <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
@@ -151,11 +151,13 @@
           <script>
             for (let i = 0; i < 6; i++) {
               document.write(`
-                <div class="gallery-image" id="gallery-${i + 1}" >
-                  <img
-                    src="/assets/img/gallery-${i + 1}.jpg"
-                    alt="gallery-image"
-                  />
+                <div 
+                  class="gallery-image" 
+                  id="gallery-${i + 1}"
+                  style='background-image: 
+                      url("/assets/img/gallery-${i + 1}.jpg");'
+                > 
+                  <h4>Explore more</h4>
                 </div>
                 `);
             }
