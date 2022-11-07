@@ -78,5 +78,60 @@ class Header extends HTMLElement {
     `;
   }
 }
+class Footer extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-item">
+                <h3>Meat Shop</h3>
+                <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+                neque mollitia dolores nostrum repellat exercitationem nulla totam.
+                Eveniet, expedita consequuntur.
+                </p>
+            </div>
+            <!-- / footer item -->
+        
+            <div class="footer-info-container">
+                <div class="footer-item">
+                    <h4>Useful Links</h4>
+                    <ul class="footer-nav">
+                        <li><a class="nav-link" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/about-us">About</a></li>
+                        <li><a class="nav-link" href="/product.html">Products</a></li>
+                        <li><a class="nav-link" href="/blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- / footer item -->
+        
+                <div class="footer-item">
+                    <h4>Contact With Us</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-pin"></i>
+                            PO Box 1338, Nayabazzar, Nepal
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            meatshop@gamil.com
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            +1 320 669 2709
+                        </li>
+                    </ul>
+                </div>
+                <!-- / footer item -->
+            </div>
+            <!-- / footer info container -->
+        </div>
+        <!-- / footer container -->
+    </footer>
+    `;
+  }
+}
 
 customElements.define('app-header', Header);
+customElements.define('app-footer', Footer);
