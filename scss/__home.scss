@@ -1,69 +1,7 @@
 // styles for home page
 
-.home {
-  // hero section start
-  .hero {
-    // position: relative;
-    background-image: linear-gradient(#ffffff45, #ffffff45),
-      url('/assets/img/hero-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-    .section-container {
-      max-width: 400px;
-      width: 100%;
-      margin-right: auto;
-      margin-left: 0px;
-      height: 470px;
-      padding: 0 25px;
-      @include flex(space-evenly, flex-start);
-      flex-direction: column;
-
-      @include responsive_small {
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-      }
-    }
-
-    .section-title,
-    .section-label {
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      margin-bottom: 10px;
-
-      @include responsive_small {
-        margin-bottom: 5px;
-      }
-    }
-
-    .section-title {
-      font-size: 36px;
-      line-height: 53px;
-      color: $black;
-      text-align: left;
-
-      @include responsive_small {
-        font-size: 30px;
-        line-height: 40px;
-        text-align: center;
-      }
-    }
-
-    .section-label {
-      font-size: 23px;
-      line-height: 30px;
-      color: $pri_clr;
-      text-transform: uppercase;
-
-      @include responsive_small {
-        font-size: 20px;
-        line-height: 26px;
-      }
-    }
-  }
-
+.home-page {
+  // hero-image section start
   .hero-image-container {
     position: relative;
     padding: 15px 10px;
@@ -113,154 +51,7 @@
       }
     }
   }
-  // hero section end
-
-  // about section start
-  .about {
-    position: relative;
-    bottom: 45px;
-
-    .section-container {
-      @include grid(30px);
-      grid-template-columns: repeat(2, 1fr);
-      padding-bottom: 0;
-
-      @include responsive_large {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
-    .section-title {
-      padding-bottom: 30px;
-
-      @include responsive_large {
-        padding-bottom: 25px;
-      }
-    }
-
-    .section-content {
-      width: 100%;
-      padding-bottom: 20px;
-      font-size: 16px;
-      line-height: 21px;
-      color: $black;
-
-      @include responsive_large {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-    }
-
-    .image-container {
-      position: relative;
-      @include grid(10px, center, center);
-      grid-template-areas:
-        'about-1 about-2'
-        'about-3 about-3';
-      gap: 10px;
-
-      @include responsive_medium {
-        grid-template-areas: 'about-1 about-2';
-      }
-
-      @include responsive_small {
-        grid-template-areas: 'about-3';
-        padding: 5px 0;
-      }
-
-      .about-image {
-        position: relative;
-        border-radius: 30px;
-      }
-
-      #about-image-1 {
-        z-index: 50;
-
-        @include responsive_small {
-          display: none;
-        }
-      }
-
-      #about-image-2 {
-        left: -10px;
-        top: 25px;
-        z-index: 100;
-        border: 15px solid $white;
-
-        @include responsive_medium {
-          left: -35px;
-          top: -50px;
-        }
-
-        @include responsive_small {
-          display: none;
-        }
-      }
-
-      #about-image-3 {
-        border: 20px solid $white;
-        bottom: 135px;
-        left: -40px;
-
-        @include responsive_medium {
-          display: none;
-        }
-
-        @include responsive_small {
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-          border: none;
-          display: block;
-          top: 0;
-          left: 0;
-        }
-      }
-    }
-  }
-  // about section end
-
-  // banner section start
-  .banner {
-    background-image: linear-gradient(#ffffff3e, #ffffff3e),
-      url(/assets/img/banner-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 470px;
-    display: grid;
-    place-items: center;
-    padding: 30px 10px;
-
-    .section-container {
-      background: #231c1cc7;
-      max-width: 565px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      border-radius: 10px;
-    }
-
-    .section-title,
-    .section-content {
-      color: $white;
-      text-align: left;
-    }
-
-    .section-title {
-      font-size: 27px;
-
-      @include responsive_small {
-        font-size: 23px;
-      }
-    }
-
-    .section-content {
-      font-size: 14px;
-      line-height: 18px;
-      padding-bottom: 10px;
-    }
-  }
-  // banner section end
+  // hero-image section end
 
   // product section start
   .product {
@@ -579,3 +370,215 @@
   }
 }
 // info section end
+
+// banner section start
+.banner {
+  background-image: linear-gradient(#ffffff3e, #ffffff3e),
+    url(/assets/img/banner-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 470px;
+  display: grid;
+  place-items: center;
+  padding: 30px 10px;
+
+  .section-container {
+    background: #231c1cc7;
+    max-width: 565px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+  }
+
+  .section-title,
+  .section-content {
+    color: $white;
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: 27px;
+
+    @include responsive_small {
+      font-size: 23px;
+    }
+  }
+
+  .section-content {
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 10px;
+  }
+}
+// banner section end
+
+// hero section start
+// hero section styles for home & about page
+.home-page .hero,
+.about-page .hero {
+  background-image: linear-gradient(#ffffff45, #ffffff45),
+    url('/assets/img/hero-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  .section-container {
+    max-width: 400px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: 0px;
+    height: 470px;
+    padding: 0 25px;
+    @include flex(space-evenly, flex-start);
+    flex-direction: column;
+
+    @include responsive_small {
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .section-title,
+  .section-label {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+
+    @include responsive_small {
+      margin-bottom: 5px;
+    }
+  }
+
+  .section-title {
+    font-size: 36px;
+    line-height: 53px;
+    color: $black;
+    text-align: left;
+
+    @include responsive_small {
+      font-size: 30px;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+
+  .section-label {
+    font-size: 23px;
+    line-height: 30px;
+    color: $pri_clr;
+    text-transform: uppercase;
+
+    @include responsive_small {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
+// hero section end
+
+// about section start
+.about {
+  position: relative;
+  bottom: 45px;
+
+  .section-container {
+    @include grid(30px);
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 0;
+
+    @include responsive_large {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .section-title {
+    padding-bottom: 30px;
+
+    @include responsive_large {
+      padding-bottom: 25px;
+    }
+  }
+
+  .section-content {
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 21px;
+    color: $black;
+
+    @include responsive_large {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    @include grid(10px, center, center);
+    grid-template-areas:
+      'about-1 about-2'
+      'about-3 about-3';
+    gap: 10px;
+
+    @include responsive_medium {
+      grid-template-areas: 'about-1 about-2';
+    }
+
+    @include responsive_small {
+      grid-template-areas: 'about-3';
+      padding: 5px 0;
+    }
+
+    .about-image {
+      position: relative;
+      border-radius: 30px;
+    }
+
+    #about-image-1 {
+      z-index: 50;
+
+      @include responsive_small {
+        display: none;
+      }
+    }
+
+    #about-image-2 {
+      left: -10px;
+      top: 25px;
+      z-index: 100;
+      border: 15px solid $white;
+
+      @include responsive_medium {
+        left: -35px;
+        top: -50px;
+      }
+
+      @include responsive_small {
+        display: none;
+      }
+    }
+
+    #about-image-3 {
+      border: 20px solid $white;
+      bottom: 135px;
+      left: -40px;
+
+      @include responsive_medium {
+        display: none;
+      }
+
+      @include responsive_small {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        border: none;
+        display: block;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+// about section end

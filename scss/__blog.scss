@@ -1,0 +1,74 @@
+.blog-page {
+  .blog {
+    .section-container {
+      @include grid(20px);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    &-item {
+      max-width: 320px;
+      justify-self: center;
+    }
+
+    &-info {
+      height: 290px;
+      background-image: linear-gradient(#00000040, #00000040),
+        url('/assets/img/hero-img-1.jpg');
+      background-position: center;
+      background-size: cover;
+      @include flex(start, end);
+      margin-bottom: 15px;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background-color: rgba($color: $pri-clr, $alpha: 0.2);
+        transition: height 150ms linear;
+      }
+
+      &:hover {
+        &::after {
+          height: 100%;
+        }
+      }
+    }
+
+    &-date,
+    &-title {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &-date {
+      font-family: 'Poppins_Regular';
+      background-color: $pri-clr;
+      color: $white;
+      width: 100%;
+      padding: 10px 15px;
+    }
+
+    &-title {
+      font-family: 'Poppins_Medium';
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+      margin-bottom: 5px;
+    }
+    &-description {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      font-size: 13px;
+      padding: 6px 10px;
+    }
+  }
+}

@@ -25,7 +25,7 @@ class Header extends HTMLElement {
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/about-us.html">About Us</a>
+                                <a class="nav-link" href="/about.html">About Us</a>
                             </li>
 
                             <li class="nav-item">
@@ -51,7 +51,7 @@ class Header extends HTMLElement {
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/about-us.html">About Us</a>
+                            <a class="nav-link" href="/about.html">About Us</a>
                         </li>
 
                         <li class="nav-item">
@@ -98,7 +98,7 @@ class Footer extends HTMLElement {
                     <h4>Useful Links</h4>
                     <ul class="footer-nav">
                         <li><a class="nav-link" href="/">Home</a></li>
-                        <li><a class="nav-link" href="/about-us">About</a></li>
+                        <li><a class="nav-link" href="/about">About</a></li>
                         <li><a class="nav-link" href="/product.html">Products</a></li>
                         <li><a class="nav-link" href="/blog.html">Blog</a></li>
                         <li><a class="nav-link" href="/contact.html">Contact</a></li>
