@@ -1,291 +1,354 @@
 // styles for home page
 
-// hero section start
-.hero {
-  // position: relative;
-  background-image: linear-gradient(#ffffff45, #ffffff45),
-    url('/assets/img/hero-bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+.home {
+  // hero section start
+  .hero {
+    // position: relative;
+    background-image: linear-gradient(#ffffff45, #ffffff45),
+      url('/assets/img/hero-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
-  .section-container {
-    max-width: 400px;
+    .section-container {
+      max-width: 400px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: 0px;
+      height: 470px;
+      padding: 0 25px;
+      @include flex(space-evenly, flex-start);
+      flex-direction: column;
+
+      @include responsive_small {
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+
+    .section-title,
+    .section-label {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 10px;
+
+      @include responsive_small {
+        margin-bottom: 5px;
+      }
+    }
+
+    .section-title {
+      font-size: 36px;
+      line-height: 53px;
+      color: $black;
+      text-align: left;
+
+      @include responsive_small {
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+
+    .section-label {
+      font-size: 23px;
+      line-height: 30px;
+      color: $pri_clr;
+      text-transform: uppercase;
+
+      @include responsive_small {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .hero-image-container {
+    position: relative;
+    padding: 15px 10px;
     width: 100%;
-    margin-right: auto;
-    margin-left: 0px;
-    height: 470px;
-    padding: 0 25px;
-    @include flex(space-evenly, flex-start);
-    flex-direction: column;
+    max-width: 1100px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include grid(30px, center, center);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 330px));
+    place-items: center;
+  }
 
-    @include responsive_small {
-      align-items: center;
-      text-align: center;
-      margin: 0 auto;
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: 290px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+
+    @include responsive_medium {
+      width: 270px;
+      height: 250px;
     }
   }
 
-  .section-title,
-  .section-label,
   .img-content {
+    padding: 30px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 10px;
 
-    @include responsive_small {
-      margin-bottom: 5px;
+    .img-text {
+      margin-bottom: 35px;
+      max-width: 100px;
+      font-family: 'Poppins_Bold';
+      font-size: 21px;
+      line-height: 32px;
+      color: $white;
+
+      .num-text {
+        font-size: 40px;
+        line-height: 43px;
+        padding-bottom: 10px;
+      }
     }
   }
+  // hero section end
 
-  .section-title {
-    font-size: 36px;
-    line-height: 53px;
-    color: $black;
-    text-align: left;
+  // about section start
+  .about {
+    position: relative;
+    bottom: 45px;
 
-    @include responsive_small {
-      font-size: 30px;
-      line-height: 40px;
-      text-align: center;
+    .section-container {
+      @include grid(30px);
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 0;
+
+      @include responsive_large {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .section-title {
+      padding-bottom: 30px;
+
+      @include responsive_large {
+        padding-bottom: 25px;
+      }
+    }
+
+    .section-content {
+      width: 100%;
+      padding-bottom: 20px;
+      font-size: 16px;
+      line-height: 21px;
+      color: $black;
+
+      @include responsive_large {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+
+    .image-container {
+      position: relative;
+      @include grid(10px, center, center);
+      grid-template-areas:
+        'about-1 about-2'
+        'about-3 about-3';
+      gap: 10px;
+
+      @include responsive_medium {
+        grid-template-areas: 'about-1 about-2';
+      }
+
+      @include responsive_small {
+        grid-template-areas: 'about-3';
+        padding: 5px 0;
+      }
+
+      .about-image {
+        position: relative;
+        border-radius: 30px;
+      }
+
+      #about-image-1 {
+        z-index: 50;
+
+        @include responsive_small {
+          display: none;
+        }
+      }
+
+      #about-image-2 {
+        left: -10px;
+        top: 25px;
+        z-index: 100;
+        border: 15px solid $white;
+
+        @include responsive_medium {
+          left: -35px;
+          top: -50px;
+        }
+
+        @include responsive_small {
+          display: none;
+        }
+      }
+
+      #about-image-3 {
+        border: 20px solid $white;
+        bottom: 135px;
+        left: -40px;
+
+        @include responsive_medium {
+          display: none;
+        }
+
+        @include responsive_small {
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+          border: none;
+          display: block;
+          top: 0;
+          left: 0;
+        }
+      }
     }
   }
+  // about section end
 
-  .section-label {
-    font-size: 23px;
-    line-height: 30px;
-    color: $pri_clr;
-    text-transform: uppercase;
+  // banner section start
+  .banner {
+    background-image: linear-gradient(#ffffff3e, #ffffff3e),
+      url(/assets/img/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 470px;
+    display: grid;
+    place-items: center;
+    padding: 30px 10px;
 
-    @include responsive_small {
-      font-size: 20px;
-      line-height: 26px;
+    .section-container {
+      background: #231c1cc7;
+      max-width: 565px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 10px;
     }
-  }
-}
 
-.hero-image-container {
-  position: relative;
-  padding: 15px 10px;
-  width: 100%;
-  max-width: 1100px;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  @include grid(30px, center, center);
-  grid-template-columns: repeat(auto-fit, minmax(270px, 330px));
-  place-items: center;
-}
+    .section-title,
+    .section-content {
+      color: $white;
+      text-align: left;
+    }
 
-.hero-img {
-  position: relative;
-  width: 100%;
-  height: 290px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  display: grid;
-  align-items: center;
+    .section-title {
+      font-size: 27px;
 
-  @include responsive_medium {
-    width: 270px;
-    height: 250px;
-  }
-}
+      @include responsive_small {
+        font-size: 23px;
+      }
+    }
 
-.img-content {
-  padding: 30px;
-
-  .img-text {
-    margin-bottom: 35px;
-    max-width: 100px;
-    font-family: 'Poppins_Bold';
-    font-size: 21px;
-    line-height: 32px;
-    color: $white;
-
-    .num-text {
-      font-size: 40px;
-      line-height: 43px;
+    .section-content {
+      font-size: 14px;
+      line-height: 18px;
       padding-bottom: 10px;
     }
   }
-}
-// hero section end
+  // banner section end
 
-// about section start
-.about {
-  position: relative;
-  bottom: 45px;
-
-  .section-container {
-    @include grid(30px);
-    grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 0;
-
-    @include responsive_large {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-  }
-
-  .section-title {
-    padding-bottom: 30px;
-
-    @include responsive_large {
-      padding-bottom: 25px;
-    }
-  }
-
-  .section-content {
-    width: 100%;
-    padding-bottom: 20px;
-    font-size: 16px;
-    line-height: 21px;
-    color: $black;
-
-    @include responsive_large {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  }
-
-  .image-container {
-    position: relative;
-    @include grid(10px, center, center);
-    grid-template-areas:
-      'about-1 about-2'
-      'about-3 about-3';
-    gap: 10px;
-
-    @include responsive_medium {
-      grid-template-areas: 'about-1 about-2';
+  // product section start
+  .product {
+    &-container {
+      margin-top: 35px;
+      @include grid(20px);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
-    @include responsive_small {
-      grid-template-areas: 'about-3';
-      padding: 5px 0;
-    }
-
-    .about-image {
-      position: relative;
-      border-radius: 30px;
-    }
-
-    #about-image-1 {
-      z-index: 50;
-
-      @include responsive_small {
-        display: none;
-      }
-    }
-
-    #about-image-2 {
-      left: -10px;
-      top: 25px;
-      z-index: 100;
-      border: 15px solid $white;
-
-      @include responsive_medium {
-        left: -35px;
-        top: -50px;
-      }
-
-      @include responsive_small {
-        display: none;
-      }
-    }
-
-    #about-image-3 {
-      border: 20px solid $white;
-      bottom: 135px;
-      left: -40px;
-
-      @include responsive_medium {
-        display: none;
-      }
-
-      @include responsive_small {
+    &-item {
+      justify-self: center;
+      .product-img {
+        border-radius: 5px;
+        height: 200px;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-        border: none;
-        display: block;
-        top: 0;
-        left: 0;
+      }
+
+      .product-name {
+        font-family: 'Poppins_Medium';
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: capitalize;
       }
     }
   }
-}
-// about section end
+  // product section end
 
-// banner section start
-.banner {
-  background-image: linear-gradient(#ffffff3e, #ffffff3e),
-    url(/assets/img/banner-bg.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 470px;
-  display: grid;
-  place-items: center;
-  padding: 30px 10px;
+  // info section start
+  .info {
+    padding: 15px;
+    background-image: url('/assets/img/map.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
 
-  .section-container {
-    background: #231c1cc7;
-    max-width: 565px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 10px;
-  }
+    .section-container {
+      position: absolute;
+      display: inline-block;
+      background-color: white;
+      height: fit-content;
+      max-width: 350px;
+      padding: 50px 40px;
+      border-radius: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10%;
 
-  .section-title,
-  .section-content {
-    color: $white;
-    text-align: left;
-  }
-
-  .section-title {
-    font-size: 27px;
-
-    @include responsive_small {
-      font-size: 23px;
-    }
-  }
-
-  .section-content {
-    font-size: 14px;
-    line-height: 18px;
-    padding-bottom: 10px;
-  }
-}
-// banner section end
-
-// product section start
-.product {
-  &-container {
-    margin-top: 35px;
-    @include grid(20px);
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  &-item {
-    justify-self: center;
-    .product-img {
-      border-radius: 5px;
-      height: 200px;
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+      @include responsive_medium {
+        right: 50%;
+        transform: translate(50%, -50%);
+        padding: 30px 20px;
+        max-width: 260px;
+      }
     }
 
-    .product-name {
-      font-family: 'Poppins_Medium';
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: capitalize;
+    .info-item {
+      @include grid(15px);
+      align-items: center;
+      grid-template-columns: auto auto;
+      padding-bottom: 15px;
+
+      i {
+        color: $pri-clr;
+        border: 2px solid $pri-clr;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        border-radius: 4px;
+        @include flex(center, center);
+      }
+
+      h4 {
+        font-family: 'Poppins_Medium';
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: capitalize;
+      }
+
+      p {
+        font-size: 13.5px;
+        line-height: 18px;
+        color: #a2a4aa;
+      }
     }
   }
+  // info section end
 }
-// product section end
 
 // gallery section start
 .gallery {
@@ -354,7 +417,7 @@
       width: 0%;
       height: 100%;
       background-color: rgba($color: $pri-clr, $alpha: 0.5);
-      transition: width 100ms linear;
+      transition: width 150ms linear;
     }
 
     &:hover {
@@ -516,64 +579,3 @@
   }
 }
 // subscribe end
-
-// info section start
-.info {
-  padding: 15px;
-  background-image: url('/assets/img/map.jpg');
-  background-position: center;
-  background-size: cover;
-  height: 500px;
-  position: relative;
-
-  .section-container {
-    position: absolute;
-    display: inline-block;
-    background-color: white;
-    height: fit-content;
-    max-width: 350px;
-    padding: 50px 40px;
-    border-radius: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10%;
-
-    @include responsive_medium {
-      right: 50%;
-      transform: translate(50%, -50%);
-      padding: 30px 20px;
-      max-width: 260px;
-    }
-  }
-
-  .info-item {
-    @include grid(15px);
-    align-items: center;
-    grid-template-columns: auto auto;
-    padding-bottom: 15px;
-
-    i {
-      color: $pri-clr;
-      border: 2px solid $pri-clr;
-      width: 36px;
-      height: 36px;
-      font-size: 18px;
-      border-radius: 4px;
-      @include flex(center, center);
-    }
-
-    h4 {
-      font-family: 'Poppins_Medium';
-      font-size: 14px;
-      line-height: 21px;
-      text-transform: capitalize;
-    }
-
-    p {
-      font-size: 13.5px;
-      line-height: 18px;
-      color: #a2a4aa;
-    }
-  }
-}
-// info section end

@@ -15,11 +15,95 @@
     <!-- JS -->
     <script src="/js/jquery.min.js"></script>
   </head>
-  <body>
+  <body class="product">
     <!-- Preloader -->
     <div id="preloader"></div>
 
     <app-header></app-header>
+
+    <!-- / Hero Start -->
+    <section class="hero">
+      <div class="section-container">
+        <div class="section-content">
+          <div class="text-content">
+            <h2 class="section-label">delicious organic meat</h2>
+            <h1 class="section-title">
+              enjoy fresh meat with the best quality
+            </h1>
+          </div>
+          <a class="btn" href="#"> Read more </a>
+        </div>
+        <!-- / section content -->
+
+        <div class="section-image">
+          <script>
+            for (let i = 0; i < 3; i++) {
+              document.write(`
+              <div
+                class='product-img'
+                id='product-img-${i + 1}'
+                style='background-image:
+                        url("/assets/img/hero-img-${i + 1}.jpg");'
+              > &#160
+              </div>
+              `);
+            }
+          </script>
+        </div>
+        <!-- / section image container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- / Hero End -->
+
+    <!-- Gallery Start -->
+    <section class="gallery">
+      <div class="section-container">
+        <h2 class="section-title">our products</h2>
+        <div class="gallery-container">
+          <script>
+            for (let i = 0; i < 6; i++) {
+              document.write(`
+                    <div 
+                      class="gallery-image" 
+                      id="gallery-${i + 1}"
+                      style='background-image: 
+                          url("/assets/img/gallery-${i + 1}.jpg");'
+                    > 
+                      <h4>Explore more</h4>
+                    </div>
+                    `);
+            }
+          </script>
+        </div>
+        <!-- / gallery container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- Gallery End -->
+
+    <!-- Subscribe Start -->
+    <section class="subscribe">
+      <div class="section-container">
+        <h2 class="section-title">
+          subscribe for <span> meat membership </span>
+        </h2>
+        <p class="section-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis impedit
+          nobis soluta amet, est ea labore quae minima suscipit repellat.
+        </p>
+
+        <div class="input-container">
+          <input
+            placeholder="Enter your email address..."
+            type="email"
+            name="email"
+          />
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe End -->
 
     <app-footer></app-footer>
 
