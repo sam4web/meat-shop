@@ -12,7 +12,8 @@ This is a simple static website for a meat shop.
 #### View
 
 - [Live site](https://meat-shop-eta.vercel.app/)
-- [Design](https://www.figma.com/file/RXU5qsnv6J3NcHe2MUOreA/Meat-shop-website)
+- [Source code](https://github.com/sam4web/meat-shop)
+- [Design](https://www.figma.com/file/RXU5qsnv6J3NcHe2MUOreA/Meat-shop-website) (Figma)
 
 #### Preview Image
 
