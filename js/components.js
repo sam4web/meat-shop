@@ -78,6 +78,7 @@ class Header extends HTMLElement {
     `;
   }
 }
+
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -133,5 +134,15 @@ class Footer extends HTMLElement {
   }
 }
 
+class BackToTop extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <div class="back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>`;
+  }
+}
+
 customElements.define('app-header', Header);
 customElements.define('app-footer', Footer);
+customElements.define('app-to-top', BackToTop);

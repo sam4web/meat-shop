@@ -1,11 +1,24 @@
 // prealoader
 $(document).ready(() => {
   $('#preloader').fadeOut();
+  $('.back-to-top').fadeOut();
 });
 
 // back to top
 $('.back-to-top').click(() => {
   window.scrollTo(0, 0);
+});
+
+$(window).scroll(() => {
+  let scrollPosition = $(window).scrollTop();
+  console.log(scrollPosition);
+  if (scrollPosition > 150) {
+    $('.back-to-top').fadeIn();
+    $('.header').addClass('fixed');
+  } else {
+    $('.back-to-top').fadeOut();
+    $('.header').removeClass('fixed');
+  }
 });
 
 //set Active link according to pages

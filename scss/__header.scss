@@ -4,6 +4,7 @@
   &__top {
     background-color: $pri-dark;
     padding: 10px 20px;
+    transition: none;
     @include flex;
 
     @include responsive_medium {
@@ -174,7 +175,7 @@
 
   display: none;
   padding: 0 20px;
-  z-index: 1000;
+  z-index: 10000;
   transition: 60ms padding-top linear;
 
   .bar {
@@ -210,6 +211,7 @@
   }
 }
 
+// side navbar toggle
 .header.show-nav {
   .navbar-small {
     left: 0%;
@@ -229,6 +231,30 @@
         top: 0;
         width: inherit;
       }
+    }
+  }
+}
+
+.header.fixed {
+  .header__top {
+    margin-bottom: 60px;
+  }
+
+  .header__bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba($color: $white, $alpha: 0.9);
+    top: 0;
+  }
+
+  .brand-name {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include responsive_small {
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
   }
 }

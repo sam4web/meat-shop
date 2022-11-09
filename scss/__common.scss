@@ -101,6 +101,7 @@ a {
   }
 }
 
+// button styles
 .btn {
   display: inline-block;
   width: fit-content;
@@ -129,5 +130,35 @@ a {
 
   &:hover {
     transform: translateY(-3px);
+  }
+}
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  background-color: $pri-clr;
+  color: $white;
+  bottom: 30px;
+  right: 35px;
+  z-index: 1000;
+  width: 35px;
+  height: 35px;
+  @include flex(center, center);
+  border-radius: 40px;
+  border: 2px solid transparent;
+  font-size: 16px;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $pri-clr;
+    color: $pri-clr;
+  }
+
+  @include responsive_medium {
+    width: 27px;
+    height: 27px;
+    font-size: 14px;
+    bottom: 20px;
+    right: 25px;
   }
 }
