@@ -23,10 +23,12 @@
 
     <section class="blog">
       <div class="section-container">
-        <script>
-          for (let i = 0; i < 5; i++) {
-            //   url('/assets/img/hero-img-1.jpg')
-            document.write(`
+        <h1 class="section-title">our blog</h1>
+        <div class="blog-item-container">
+          <script>
+            for (let i = 0; i < 5; i++) {
+              //   url('/assets/img/hero-img-1.jpg')
+              document.write(`
                 <div class="blog-item">
                     <div class="blog-info">
                         <img src='https://source.unsplash.com/1000x100${i}' />
@@ -36,8 +38,8 @@
                     <div class="blog-content">
                         <h3 class="blog-title">Lekali Meats</h3>
                         <p class="blog-description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                        libero expedita in nam quae quaerat quasi iusto temporibus, atque
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
+                          libero expedita in nam quae quaerat quasi iusto temporibus, atque
                         quas.
                         </p>
                         <a href="#" class="btn">Read more</a>
@@ -46,10 +48,14 @@
                 </div>
                 <!-- / blog item -->
                 `);
-          }
-        </script>
+            }
+          </script>
+        </div>
+        <!-- / blog item container -->
       </div>
+      <!-- / section container -->
     </section>
+    <!-- / blog section -->
 
     <!-- Banner Start -->
     <section class="banner">

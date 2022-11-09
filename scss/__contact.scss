@@ -17,6 +17,7 @@
       @include responsive_medium {
         grid-template-columns: 1fr;
         padding: 20px 10px;
+        gap: 45px;
       }
     }
 
@@ -34,13 +35,16 @@
         margin-left: auto;
         height: 180px;
         @include flex(space-between, center);
-        text-align: center;
       }
 
       .section-title,
       .section-label {
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin-bottom: 10px;
+
+        @include responsive_medium {
+          text-align: center !important;
+        }
 
         @include responsive_small {
           margin-bottom: 5px;
@@ -56,7 +60,6 @@
         @include responsive_small {
           font-size: 30px;
           line-height: 40px;
-          text-align: center;
         }
       }
 

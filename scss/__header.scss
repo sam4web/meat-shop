@@ -148,7 +148,7 @@
     height: 100vh;
     background-color: $pri-clr;
     transition: 150ms left linear;
-    z-index: 100;
+    z-index: 10000;
 
     .navbar-nav {
       @include flex;

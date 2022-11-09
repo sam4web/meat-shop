@@ -1,8 +1,13 @@
 .blog-page {
   .blog {
-    .section-container {
+    .blog-item-container {
+      margin-top: 45px;
       @include grid(20px);
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+      @include responsive_medium {
+        margin-top: 35px;
+      }
     }
 
     &-item {
@@ -11,7 +16,6 @@
     }
 
     &-info {
-      // height: 290px;
       height: fit-content;
       @include flex(start, end);
       flex-direction: column;
@@ -20,6 +24,7 @@
       border-radius: 5px;
       overflow: hidden;
       transition: all 150ms linear;
+      cursor: pointer;
 
       &::after {
         content: '';
@@ -54,6 +59,7 @@
       color: $white;
       width: 100%;
       padding: 10px 15px;
+      z-index: 100;
     }
 
     &-title {
