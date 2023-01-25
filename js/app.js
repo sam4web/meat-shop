@@ -11,7 +11,6 @@ $('.back-to-top').click(() => {
 
 $(window).scroll(() => {
   let scrollPosition = $(window).scrollTop();
-  console.log(scrollPosition);
   if (scrollPosition > 150) {
     $('.back-to-top').fadeIn();
     $('.header').addClass('fixed');
@@ -24,7 +23,6 @@ $(window).scroll(() => {
 //set Active link according to pages
 let origin = window.location.origin;
 let page_location = window.location.href.replace(origin + '/', '').trim();
-// console.log(page_location);
 $('.navbar_links a[href*="' + page_location + '"]')
   .addClass('active')
   .siblings()
