@@ -16,28 +16,28 @@ class Header extends HTMLElement {
 
             <div class="header__bottom">
                 <div class="large">
-                    <a class="brand-name noselect" href="/"> Meat Shop </a>
+                    <a class="brand-name noselect" href="./"> Meat Shop </a>
 
                     <nav class="navbar navbar-large">
                         <ul class="navbar-nav navbar_links">
                             <li class="nav-item">
-                                <a class="nav-link" href="/"> Home </a>
+                                <a class="nav-link" href="./"> Home </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/about.html">About Us</a>
+                                <a class="nav-link" href="./about.html">About Us</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/product.html">Product</a>
+                                <a class="nav-link" href="./product.html">Product</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/blog.html">Blog</a>
+                                <a class="nav-link" href="./blog.html">Blog</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/contact.html">Contact Us</a>
+                                <a class="nav-link" href="./contact.html">Contact Us</a>
                             </li>
                         </ul>
                     </nav>
@@ -47,23 +47,23 @@ class Header extends HTMLElement {
                 <nav class="navbar navbar-small">
                     <ul class="navbar-nav navbar_links">
                         <li class="nav-item">
-                            <a class="nav-link" href="/"> Home </a>
+                            <a class="nav-link" href="./"> Home </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/about.html">About Us</a>
+                            <a class="nav-link" href="./about.html">About Us</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/product.html">Product</a>
+                            <a class="nav-link" href="./product.html">Product</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/blog.html">Blog</a>
+                            <a class="nav-link" href="./blog.html">Blog</a>
                         </li>
 
                         <li class="nav-item">
-                             <a class="nav-link" href="/contact.html">Contact</a>
+                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -98,11 +98,11 @@ class Footer extends HTMLElement {
                 <div class="footer-item">
                     <h4>Useful Links</h4>
                     <ul class="footer-nav">
-                        <li><a class="nav-link" href="/">Home</a></li>
-                        <li><a class="nav-link" href="/about">About</a></li>
-                        <li><a class="nav-link" href="/product.html">Products</a></li>
-                        <li><a class="nav-link" href="/blog.html">Blog</a></li>
-                        <li><a class="nav-link" href="/contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="./">Home</a></li>
+                        <li><a class="nav-link" href="./about">About</a></li>
+                        <li><a class="nav-link" href="./product.html">Products</a></li>
+                        <li><a class="nav-link" href="./blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <!-- / footer item -->
