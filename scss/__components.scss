@@ -4,7 +4,7 @@
 .home-page .hero,
 .about-page .hero {
   background-image: linear-gradient(#ffffff45, #ffffff45),
-    url('/assets/img/hero-bg.jpg');
+    url('../assets/img/hero-bg.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -184,7 +184,7 @@
 .home-page .banner,
 .blog-page .banner {
   background-image: linear-gradient(#ffffff3e, #ffffff3e),
-    url(/assets/img/banner-bg.jpg);
+    url('../assets/img/banner-bg.jpg');
   background-position: center;
   background-size: cover;
   height: 470px;
@@ -230,7 +230,7 @@
 .home-page .info,
 .contact-page .info {
   padding: 15px;
-  background-image: url('/assets/img/map.jpg');
+  background-image: url('../assets/img/map.jpg');
   background-position: center;
   background-size: cover;
   height: 500px;
@@ -296,7 +296,7 @@
   margin-top: 50px;
   margin-bottom: 65px;
   background-image: linear-gradient(#ffffff45, #ffffff45),
-    url('/assets/img/subscribe-bg.jpg');
+    url('../assets/img/subscribe-bg.jpg');
   background-position: center;
   background-size: cover;
   height: 500px;
