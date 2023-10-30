@@ -17,4 +17,4 @@ This is a simple static website for a meat shop.
 
 #### Preview Image
 
-![preview image](/page-preview-image.png)
+![preview image](/full-page-preview.png)
